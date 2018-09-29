@@ -1,4 +1,4 @@
-# Arcade Game
+# Feed Reader Testing
 This is Project 4 in the Udacity/Google Frontend Nanodegree course. I was lucky enough to be one of the recipients of a scholarship for this course and I'm super excited to work through all the challenges ahead!
 
 ## Dependencies
@@ -13,7 +13,7 @@ Clone this repo to your local machine using:
 Launch the index.html file with your favorite browser.
 
 ## Running Remotely
-[navigate here](https://evanhumanist.github.io/frontend-nanodegree-feedreader-game/index.html)
+[navigate here](https://evanhumanist.github.io/frontend-nanodegree-feedreader/index.html)
 
 ## Instructions
 Scroll down to the Jasmine section and ensure that all tests pass. If any tests fail, then refactor your code until they pass.
