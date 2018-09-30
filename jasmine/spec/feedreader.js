@@ -113,7 +113,8 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
         const FEED = $('.feed');
-        let firstFeedContent = '';
+        let firstFeedContent = null;
+        let secondFeedContent = null;
 
         // We use beforeEach and done for the below async handling.
         // Here we load the first feed and store the inner HTML in a variable.
@@ -121,17 +122,16 @@ $(function() {
         beforeEach(function (done) {
             loadFeed(0, function () {
                 firstFeedContent = FEED.find('.entry')[0].innerHTML;
+                loadFeed(1, function () {
+                    secondFeedContent = FEED.find('.entry')[0].innerHTML;
+                    done();
+                });
             });
-            console.log(firstFeedContent);
-            loadFeed(1, function () {
-                done();
-            });
-            console.log(firstFeedContent);
         });
 
         it('changes content', function(done) {
-            expect(FEED.find('.entry')[0].innerHTML).not.toEqual(firstFeedContent);
+            expect(firstFeedContent).not.toEqual(secondFeedContent);
             done();
-        })
+        });
     });
 }());
